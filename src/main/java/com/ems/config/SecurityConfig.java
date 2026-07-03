@@ -34,7 +34,8 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowedOrigins(List.of(
-                "http://localhost:63342"
+                "http://localhost:63342",
+                "https://senfo.netlify.app"
         ));
 
         config.setAllowedMethods(List.of(
@@ -56,4 +57,6 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+
 }
